@@ -1,0 +1,86 @@
+baza danych to zbior danych uporządkowanych zgodnie z okreslona haraketrystka i w określonej strukturze 
+dane - cyfrowa forma informcacji majaca interpetecja binarna odpowiednie do transmisji i przetwarzania
+system zarzadzania baza danych (SZBD), system programów i narzedzi umozilwiajacych : tworzenie, przechowaywanie, przetwarzanie, zarzadzanie bazami danych. 
+system bazy danych - system zarzadzania baza danych obslugujacy okresolna baze danych 
+cechy systemu bazy danych : okreslona strutkura systemu bazy danych, trwalosc danych, możliwość realizacji określonych operacji na danych. (edycja, realizacja zapytać, usuwanie danych itp), niezaleznosc danych, bezpiczenstwo, spojnosc, skalowalność danych. 
+Modele baz danych:Model jednorodny - proste bazy danych oparte na jednej tabeli. model hierarchiczny - oparty na strukturze odwróconego drzewa.
+ model sieciowy(rozproszony) - poszczególne elementy mogą laczyc się z innymi i tworzyć kratownice. Model relancyjny - przechowywanie danych w postaci relancyjnych.
+model postrelacyjny(relacyjno obiektowy)- w strukturze relanycyjnej bazy danych mogą być przechowywane dane typu obiektowego. Model obiektowy - opiera się na koncepcji obiektu którego obiekt jest odwzorowaniem rzeczywistości. krotka - to niepowtarzalny zbior wartości o określonych typach danych umieszczony w polach opisujący pojedynczy elemnent bazy danych. Atrybut - to kolumna tabeli majaca okreslona nazwe. Encja - to reprezancja zarówno obiektu materialnego jak i nie materialnego bedacego elementem dającym się odroznic się przez określone cechy. encje sa opisane atrybutami. Rodzaje kluczy - kazda tabela musi mieć atrybut jednoznacznie identyfikujący każdy rekord tabeli bazy danych. taki atrybut nazywa się kluczem glownym. klucz glowny musi spelniac nastepujace warunki, być unikatowy nie może przyjmować wartości null, wartość klucza nie może podlegać zmianom, mieć nie podzielna wartość. Klucz prosty - Klucz jedno elementowy, klucz obcy - klucz glowny jednej tabeli wykorzystywany do tworzenia zwiazkow miedzy tabelami. Klucz obcy nie może być kluczem glownym. Normalizacja to proces wystepujacy podczas projektowania i optymalizowania relancyjnej bazy danych polegających na analizie encji i wartości atrybutow encji ma na celu zmniejszenie liczby atrybutow i zmniejszenie encji. typy danych - INTEGER - liczby całkowite, FLOAT - typ zmiennoprzcinkowy, VARCHAR - pole tekstowe BOOLEAN - 
+prawda fałsz, DATETIME - do czasu i daty. Cykl projektowy systemu baz danych - analiza, projektowanie, implemetnacja, wdrożenie. Relacje : 1 do 1 - czyli jedenemu rekordowi z tabeli a można przyporzadkowac tylko jeden z tabeli B. 1 do wielu - wiele rekordow z tabeli A można przyporzdkowac do jednego rekordu z tabeli B. Wiele do wielu - wiele rekordow z tabeli A może być przyporzdkowane do wielu rekordow z tabeli B. Tworzenie tabel w msaccess pojęcia : tytul to etykieta pola na formularzu pozwalajaca na jej identyfikacje i mogaca wystapic w wyrażeniach obliczeniowych. wartość domyslna wystepuje jako ciag znakow pojawiających się automatycznie dla nowych rekordow. Indeksowanie to funkcja przyspieszajaca wyszukiwanie i sortowanie danych.
+
+Wyrażenie w ms ACCess to formuła składająca się z opearotów matematycznych i logicznych stałych, funckji, pól, tabel, kontrolek i włąsciwości której wyunikiem jest pojedyczna wartość.
+
+Do tworzenia wyrażeń korzysta się z operatorów w MS acesss do duspozcji: operatory arytmetycznego (+, -, *, /)
+Operatory porównań (<,>,=) Operatory tekstowe (&), Operatory logiczne (not, or, like itp.)
+
+Wyrażenia 
+LIKE ,,K*"- wszystkie nazwy z pole które zaczynają się na K, 
+LIKE ,,*K" - wypisuje wszystkie nazwy z danego pola które kończą się na K
+LIKE ,,*K*" - wypisuje wszystkie nazwy gdzie wystepuje litera K
+
+=[Cena]*1.23 - Zwróci cenę bruto przy VAT = 23%
+=Avg ([wiek]) - wyświetla średnią pola wiek
+=date() - wyświetka bieżącą date 
+Not ,,Warszawa" - wyświetla wszykie nazawy miast z danego polla, inne niż Warszawa
+=[Imie]&[Nazwisko] - wyświetla warości znajdujące się w polach Imie i Nazwisko
+
+Formularze są obiektami bazy i odgrywają role interefejsu użytkownika bazy danych MS Accdess. Rozróżnia się formularze powiązane i niepowiązanE. Źródłem danych dla formulatrzy powiązanych są inne obiekty bazy takie jak tabele i kwerendy. Formularz umożliwia wprowadzanie, edytowanie i wyświetlanie danych.
+
+W grupie formularzy jest do dyspozycji kilka opcji które pozwalają tworzyć nastepujące obiekty;
+- formularz powiązany, tworzony z istniejącej tabeli lub zapytania;
+- formularz pusty, który nie zawiera żadnych kontrolek ani wstępnie zdefiniowanych elementów
+- Formularz dzielony który udostępnia jednocześnie dwa widoki danych - formularza i arkusz danych
+- Formularz ciągłe o nazwe ,,Wiele elementów" który stosuje się do wyświetlania wielu rekordów w formularzu o większej możliwości dostosowania niż w arkuszu danych;
+- Formularz zawierający podformularz, przydatny podczas wyświetlania danych z wielu tabel lub zapytań;
+- Formularz nawigacyjny który ma kontrolki nawigacyjne pozwalające uruchamiać inne obiekty bazy danych oraz wykonywać makropolecnia do obsługi całej bazy. 
+
+Kwarenda jest zapytaniem które kieruje się do tabel lub innych kwerend pozwalają na różne sposoby przeglądać modyfikować i analizować dane. 
+
+Ze względu na;
+Role realizowanego zapytania kwerendy dzieli się na dwie grupy:
+- kwerendy wybierające
+- kwerendy funkcjonalne
+
+Drugą grupą wkerend są kwerendy funkcjonalne do kwerend funkcjonalnych zalicza się;
+ - Kwerendy modyfikujące
+ - Kwerendy usuwające
+ - Kwerendy aktualizacujące
+ - Kwerendy dołączające
+ - kwerendy tworzące tabele
+ - kwerendy krzyżowe	
+
+Każdy raport składa sę z następujących sekcji;
+- nagłówek raportu
+- nagłowek strony 
+- nagłowek grupy
+- szczegóły 
+- stopka grupy 
+- stopka strony 
+- stopka raportu
+
+Makro jest zbiorem akcji wykonywabnych jako odpwiedź na określone zdarzenie lub po spełnieniu zdefinionwanych warunków. W CZASIE TWORZenia formulearzy raportów i kontrolek najczęściej korysta się z makr bez potrzeby pisania kodu w module języka VBA.
+
+VBA jest językiem programowania zorientowanym obiektowo, każdy obiekt może mieć określony zbiór metod na nim wykonywanych
+
+
+Dokument HTML - czytany przez przeglądarke internetową widoczny pod konkretnym adresem URL 
+
+Strona internetowa - zbiór dokumentów HTML połącznych ze sobą liniami URL 
+
+adres URL - usługa pozwalająca na publikowanie tresci w sieci INTERNET
+
+DOMENA - Adres strony internetowej
+
+Serwer Internetowy - urządzenia do obsługi technicznej stron WWW 
+
+Witryna internetowa zbiór połączonych ze sobą pojedycznych stron internetowych
+
+strona główna - to strona na którą domyślnie kieruje adres witryny internetowej
+
+HOSTING - Przestrzeń na danym serwerze gdzie przechowywana jest zawartośc strony.
+
+Responsywność - automatyczne dostosowanie rozmiaru stron do urządzeń na których będzie wyświetlana
+
+Certyfikat SSL - Szyfrowanie które zabezpiecza dane pozostawione na stronie WWW
+
+SEO - Zestaw działań mających na celu poprawę widoczności strony internetowej w wynikach wyszukiwania
